@@ -14,6 +14,7 @@ struct ContentView: View {
             RoundedRectangle(cornerRadius: 10.0).stroke()
             Text("👻")
         })
+            .padding()
             .foregroundColor(Color.orange)
     }
 }
