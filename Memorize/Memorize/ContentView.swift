@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         return ZStack(content: {
-            RoundedRectangle(cornerRadius: 10.0)
+            RoundedRectangle(cornerRadius: 10.0).stroke().foregroundColor(Color.orange)
             Text("👻")
         })
     }
