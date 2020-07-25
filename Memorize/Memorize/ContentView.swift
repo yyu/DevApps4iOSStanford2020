@@ -10,7 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        return Text("👻")
+        return RoundedRectangle(cornerRadius: 10.0)
+//        return Text("👻")
     }
 }
 
