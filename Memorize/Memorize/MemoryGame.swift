@@ -13,17 +13,8 @@ struct MemoryGame<CardContent> {
 
     mutating func choose(card: Card) {
         print("card chosen: \(card)")
-        let chosenInddex: Int = self.index(of: card)
+        let chosenInddex: Int = cards.firstIndex(matching: card)
         self.cards[chosenInddex].isFaceUp = !self.cards[chosenInddex].isFaceUp
-    }
-
-    func index(of card: Card) -> Int {
-        for index in 0..<self.cards.count {
-            if self.cards[index].id == card.id {
-                return index
-            }
-        }
-        return 0 // TODO: bogus!
     }
 
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
